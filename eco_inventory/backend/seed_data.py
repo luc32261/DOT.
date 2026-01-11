@@ -38,7 +38,7 @@ def seed():
             # BOTTOMS
             Product(name="Slim Fit Jeans", category="Bottoms", size="32", price=75.0, carbon_footprint_weight=8.0, image_url="https://images.unsplash.com/photo-1542272454315-4c01d7abdf4a?auto=format&fit=crop&q=80&w=600&v=999"),
             Product(name="Summer Chinos", category="Bottoms", size="34", price=60.0, carbon_footprint_weight=6.0, image_url="https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&q=80&w=600&v=999"),
-            Product(name="Bamboo Yoga Pants", category="Bottoms", size="M", price=55.0, carbon_footprint_weight=3.0, image_url="https://images.unsplash.com/photo-1506619216599-9d16d0903dfd?auto=format&fit=crop&q=80&w=600&v=999"),
+            Product(name="Bamboo Yoga Pants", category="Bottoms", size="M", price=55.0, carbon_footprint_weight=3.0, image_url="https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?q=80&w=600&auto=format&fit=crop"),
             Product(name="Cargo Shorts", category="Bottoms", size="34", price=40.0, carbon_footprint_weight=5.0, image_url="https://images.unsplash.com/photo-1591195853828-11db59a44f6b?auto=format&fit=crop&q=80&w=600&v=999"),
             Product(name="Pleated Skirt", category="Bottoms", size="S", price=50.0, carbon_footprint_weight=4.0, image_url="https://images.unsplash.com/photo-1582142327242-0b2626b29841?auto=format&fit=crop&q=80&w=600&v=999"),
 

@@ -12,9 +12,8 @@ export function InventoryView({ searchQuery = '' }) {
         const fetchInv = async () => {
             try {
                 const res = await axios.get('/api/inventory/all');
-                // Default Sort: Alphabetical by Product Name
-                const sorted = res.data.sort((a, b) => a.product_name.localeCompare(b.product_name));
-                setInventory(sorted);
+                // Use backend order (grouped by category/seed) instead of alphabetical
+                setInventory(res.data);
                 setLoading(false);
 
                 // Fetch AI Forecasts separately
@@ -90,7 +89,11 @@ function InventoryTable({ inventory, forecasts, onTransfer }) {
                         <tr key={item.id} className="hover:bg-white/5 transition-colors">
                             <td className="p-4 font-medium flex items-center gap-3">
                                 <div className="w-10 h-10 rounded bg-white/10 flex items-center justify-center overflow-hidden shrink-0">
-                                    <Package size={16} />
+                                    {item.product_image ? (
+                                        <img src={item.product_image} alt={item.product_name} className="w-full h-full object-cover" />
+                                    ) : (
+                                        <Package size={16} />
+                                    )}
                                 </div>
                                 <div className="flex flex-col">
                                     <span className="font-bold">{item.product_name}</span>

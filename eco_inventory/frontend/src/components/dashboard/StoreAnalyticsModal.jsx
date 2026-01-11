@@ -109,7 +109,12 @@ export function StoreAnalyticsModal({ store, onClose }) {
                                             <tbody className="divide-y divide-white/10">
                                                 {data.high_demand.map((item, i) => (
                                                     <tr key={i}>
-                                                        <td className="p-3 font-medium">{item.product_name}</td>
+                                                        <td className="p-3 font-medium flex items-center gap-2">
+                                                            <div className="w-8 h-8 rounded bg-white/10 overflow-hidden shrink-0">
+                                                                {item.image_url && <img src={item.image_url} alt="" className="w-full h-full object-cover" />}
+                                                            </div>
+                                                            {item.product_name}
+                                                        </td>
                                                         <td className="p-3 text-right font-bold text-green-400">{item.velocity.toFixed(1)}/wk</td>
                                                     </tr>
                                                 ))}
@@ -138,7 +143,12 @@ export function StoreAnalyticsModal({ store, onClose }) {
                                             <tbody className="divide-y divide-white/10">
                                                 {data.dead_stock.map((item, i) => (
                                                     <tr key={i}>
-                                                        <td className="p-3 font-medium">{item.product_name}</td>
+                                                        <td className="p-3 font-medium flex items-center gap-2">
+                                                            <div className="w-8 h-8 rounded bg-white/10 overflow-hidden shrink-0">
+                                                                {item.image_url && <img src={item.image_url} alt="" className="w-full h-full object-cover" />}
+                                                            </div>
+                                                            {item.product_name}
+                                                        </td>
                                                         <td className="p-3 text-right font-bold text-red-400">{item.quantity}</td>
                                                     </tr>
                                                 ))}
