@@ -231,7 +231,8 @@ def get_store_analytics(id):
             "product_name": i.product.name,
             "category": i.product.category,
             "quantity": i.quantity,
-            "velocity": i.weekly_sales_velocity
+            "velocity": i.weekly_sales_velocity,
+            "image_url": i.product.image_url
         } for i in inv_list]
         
     return jsonify({
