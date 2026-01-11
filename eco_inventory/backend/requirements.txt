@@ -1,0 +1,8 @@
+Flask
+Flask-SQLAlchemy
+Flask-Marshmallow
+marshmallow-sqlalchemy
+flask-cors
+geopy
+pandas
+python-dotenv
